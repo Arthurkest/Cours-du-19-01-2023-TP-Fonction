@@ -4,6 +4,8 @@
 
 package fr.eni.tp_0_function;
 
+import java.util.Scanner;
+
 /**
  *
  * @author erwan
@@ -30,56 +32,46 @@ public class TP_0_Function {
 
      public static void simpleEntreeEtAffichage()
     {
-        /*
-         * Vous devez simplement demander dans cette fonction à l'utilisateur 
-         * de rentrer un nombre. Ensuite, à l'aide de println(), vous devrez
-         * afficher ce nombre
-         * Par exemple, si j'appelle la fonction simpleEntreeEtAffichage();
-         * Elle demandera "Quel nombre voulez-vous afficher", et si l'utilisateur
-         * entre 3, la fonction devra afficher 3
-         * Cette fonction ne retourne rien.
-        */
+        
+        Scanner simpleEntree = new Scanner(System.in);
+        
+        System.out.print("Saisir un nombre : ");
+        String nombreSaisi = simpleEntree.next();
+        
+        System.out.print(nombreSaisi);
+        
     }
     public static int simpleSoustraction(int intA, int intB)
     {
-        /*
-         * Vous devez simplement coder une fonction qui retourne le résultat
-         * de la soustraction intA - intB.
-         * Par exemple, si j'appelle la fonction simpleSoustraction(3,4);
-         * Elle devra retourner -1
-        */
+        int somme = intA - intB;
+        return somme;
     }
     
     public static void simpleAffichageSoustraction(int intA, int intB)
     {
-        /*
-         * Vous devez simplement coder une fonction qui affiche le résultat
-         * de la soustraction intA - intB.
-         * Par exemple, si j'appelle la fonction simpleAffichageSoustraction(3,4);
-         * Elle devra afficher dans la console -1
-        */
+       int somme = intA - intB;
+       System.out.print(somme);
     }
     
     public static void tableDeMultiplication(int intTable, int intNbLimite)
     {
-        /* 
-         * Ecrire la fonction tableDeMultiplication qui va afficher la table
-         * intTable entrée en argument.
-         * Il faudra partir de 1 et aller jusqu'à intNbLimite.
-         * Vous vous aiderez de println()
-         * exemple d'affichage si on appelle : tableDeMultiplication(5,13);
-         * 5 * 1 = 5
-         * 5 * 2 = 10
-         * 5 * 3 = 15
-         * ... (etc)
-         * 5 * 12 = 60
-         * 5 * 13 = 65
-        */
+        if (intTable >0)
+        {
+            for (int compteur=1; compteur <=intNbLimite; compteur++)
+            {
+                System.out.print(intTable +" * "+ compteur +" = "+ (intTable * compteur) );
+            }
+        }
+        else 
+        {
+             System.out.print("le nombre n'est pas accepté");
+        }
     }
     
     public static int conversionBaseDix(int intNbrBinaireConvertir)
     {
-    
+        /*Pour cette foction il va faire utiliser la taille de "intNbrBinaireConvertir" et un for */
+        
         /*
          * Pour cette fonction, il est conseillé de comprendre comment on 
          * convertit un nombre binaire en base 10, veuillez suivre ce lien :
@@ -92,14 +84,14 @@ public class TP_0_Function {
         */
     }
     
-    public static String codeCesar(String strMot, int intDecalage) //QUESTION BONUS
+   public static String codeCesar(String strMot, int intDecalage) //QUESTION BONUS
     {
         /*
          * Ecrire une fonction qui va permettre de chiffre un mot strMot à 
          * l'aide d'un décalage intDecalage.
          * Par exemple, si on appelle : codeCesar("ABCD", 2);  
          * Il faudra retourner la chaîne suivante : "CDEF"
-        */
+        */     
         
     }
 }
